@@ -1,0 +1,37 @@
+body{
+    /* background-image: url("https://e0.pxfuel.com/wallpapers/731/39/desktop-wallpaper-best-code-id-programming-c-c-programming-language.jpg"); */
+    background: linear-gradient(rgba(15, 32, 65, 0.782), rgba(53, 53, 100, 0.475)), url("https://e0.pxfuel.com/wallpapers/731/39/desktop-wallpaper-best-code-id-programming-c-c-programming-language.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+textarea{
+    background-color: black;
+    color: rgb(111, 104, 104);
+    font-size: 14px;
+    padding: 10px;
+    line-height: 17px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #aaaaaa;
+    font-family: "Consolas";
+}
+#codes{
+    width : 735px;
+}
+#inputs{
+    width : 350px;
+}
+.radio-text{
+    color:#aaaaaa;
+    padding-bottom: 115px;
+}
+.lower{
+    display: flex;
+}
+.lower_input{
+    padding-left: 50px;
+}
+.comment{
+    padding-left:5px;
+}

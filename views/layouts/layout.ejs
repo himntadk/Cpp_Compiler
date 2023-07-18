@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css” >
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js”></script>
+    <script src=”js/linenumbers/jquery-linenumbers.js”></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+    <script>
+        function funIncrease(){
+            var txt = document.getElementById("codes");
+            var style = window.getComputedStyle(txt,null).getPropertyValue('font-size');
+            var curSize = parseFloat(style);
+            txt.style.fontSize = (curSize + 1) + 'px';
+        }
+        function funDecrease(){
+            var txt = document.getElementById("codes");
+            var style = window.getComputedStyle(txt,null).getPropertyValue('font-size');
+            var curSize = parseFloat(style);
+            txt.style.fontSize = (curSize - 1) + 'px';
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <br>
+<div class="row">
+    <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <form id="myForm" action="/compileCpp" method="POST">
+        <div>
+        <select name="language" id="language">
+            <option value="cpp">cpp</option>
+            <option value="py">py</option>
+            <option value="java">java</option>
+            <option value="js">js</option>
+        </select>
+        <button type="button" onclick="funIncrease()">A+</button>
+        <button type="button" onclick="funDecrease()"><span style="font-size: 11px;">A-</span></button>
+        </div>
+        <div>
+            <textarea name="codes" id="codes" cols="30" rows="20" placeholder="#include<bits/stdc++.h>"></textarea>
+        </div>
+    <div class="lower">
+        <div>
+            <textarea name="inputs" id="inputs" cols="30" rows="10" placeholder="e.g 234"></textarea>
+        </div>
+        <div class="lower_input">
+        <div class="radio-text">
+            <div>Use Inputs</div>
+            <div>
+            <input type="radio" name="radio" value="true"><span class="comment">yes</span>
+            <input type="radio" name="radio" value="false"><span class="comment">no</span>
+            </div>
+        </div>
+        <input type="submit" name="submit" value="Run">
+       </div>
+    </div>
+    </form>
+    </div>
+</div>
+    <%- body %>
+    <br>
+
+</body>
+</html>
